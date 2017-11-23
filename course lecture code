@@ -1,0 +1,41 @@
+select * from customer;
+select first_name, last_name, email from customer;
+select * from film;
+select rating from film;
+select DISTINCT rating from film;
+
+select first_name, last_name, email from customer
+where first_name = 'Nancy' and last_name = 'Thomas';
+
+select * from film;
+
+select description from film
+where title = 'Outlaw Hanky';
+
+select * from address;
+
+select phone from address
+where address = '259 Ipoh Drive';
+
+
+select * from payment;
+select customer_id, amount from payment
+ORDER BY amount DESC
+limit 10;
+
+select * from film;
+
+select film_id, title, release_year from film
+Order by film_id asc
+limit 5;
+
+select * from payment;
+
+
+
+
+
+
+
+
+
