@@ -30,6 +30,61 @@ Order by film_id asc
 limit 5;
 
 select * from payment;
+select payment_date, amount, payment_id from payment
+where payment_date between '2007-02-15' and '2017-02-19';
+
+
+
+select * from payment;
+select count(amount) from payment
+where amount > 5;
+
+select count(*) from actor
+where first_name LIKE 'P%';
+
+select distinct district
+from address;
+select * from film;
+
+select COUNT(rating) from film
+where rating = 'R' AND replacement_cost BETWEEN 5 and 15;
+
+select COUNT(title) 
+from film
+where title LIKE '%Truman%';
+
+
+select * from payment;
+select staff_id , sum(amount), count(amount)
+from payment
+group by staff_id
+order by sum(amount) desc;
+
+select * from film;
+
+select rating, round(AVG(replacement_cost),2) from film 
+group by rating;
+
+select customer_id, sum(amount) from payment
+group by customer_id
+order by sum(amount) desc
+limit 5;
+
+select customer_id, count(amount) 
+from payment
+group by customer_id
+having count(amount) >= 40;
+
+select rating, avg(rental_duration) from film
+group by rating
+having avg(rental_duration) > 5;
+
+
+
+
+
+
+
 
 
 
